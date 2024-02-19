@@ -1,0 +1,115 @@
+/* Style the side navigation bar */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+/* Change the color of links on hover */
+.sidenav a:hover {
+  background-color: #555;
+}
+
+/* Style the main content */
+.main {
+  margin-left: 220px; /* Increased to accommodate sidebar */
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+.main h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.main h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.main h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.main h4 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.main h5 {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Style paragraphs */
+.main p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Style links */
+.main a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+/* Add hover effect on main content */
+.main:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the header */
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
