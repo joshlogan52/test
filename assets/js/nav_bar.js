@@ -1,20 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Array of navigation items
-  var navItems = [
-    { text: "Home", link: "/pages/home.html" },
-    { text: "About", link: "/pages/about.html" },
-    { text: "Contact", link: "/pages/contact.html" }
-    // Add more navigation items as needed
-  ];
+    // Get the side navigation bar element
+    var menu = document.getElementById("menu");
 
-  // Get the side navigation bar element
-  var sidenav = document.getElementById("sidenav");
-
-  // Generate navigation links dynamically
-  navItems.forEach(function(item) {
-    var link = document.createElement("a");
-    link.textContent = item.text;
-    link.href = item.link;
-    sidenav.appendChild(link);
-  });
+    // Add event listeners to navigation links
+    document.getElementById("home-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        loadContent("home");
+    });
+    document.getElementById("learn-to-sail-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        loadContent("learn_to_sail");
+    });
+    document.getElementById("navigation-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        loadContent("navigation");
+    });
+    document.getElementById("boat-ownership-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        loadContent("boat_ownership");
+    });
 });
+
+function loadContent(pageId) {
+    // Fetch and inject content for the specified page ID
+    var contentUrl = "/content/" + pageId + ".html";
+    var containerId = "main_content";
+    fetchContent(contentUrl, containerId);
+}
+
+function fetchContent(url, containerId) {
+    fetch(url)
+    .then(response => response.text())
+    .then(content => {
+        document.getElementById(containerId).innerHTML = content;
+    })
+    .catch(error => console.error('Error fetching content:', error));
+}

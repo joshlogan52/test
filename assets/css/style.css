@@ -24,6 +24,50 @@
   background-color: #555;
 }
 
+/* Style the menu */
+.menu {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+}
+
+/* Style the links inside the menu */
+.menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+/* Style the dropdown submenus */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position submenu to the right of the parent item */
+  background-color: #333;
+  padding: 0;
+}
+
+.submenu li {
+  display: block;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+
+
+
+
+
 /* Style the main content */
 .main {
   margin-left: 220px; /* Increased to accommodate sidebar */

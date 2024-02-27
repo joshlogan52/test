@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch and inject content for each section
-    fetchContent('content/home_page.html', 'home');
+    fetchContent('content/home.html', 'main_content');
 
     // Fetch and inject content for other sections as needed
 });
