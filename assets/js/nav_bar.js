@@ -19,6 +19,17 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         loadContent("boat_ownership");
     });
+
+    // Add event listeners to submenu links
+    var submenuLinks = document.querySelectorAll(".submenu a");
+    submenuLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            // Extract pageId from link's href attribute
+            var pageId = link.getAttribute("href").substring(1);
+            loadContent(pageId);
+        });
+    });
 });
 
 function loadContent(pageId) {
