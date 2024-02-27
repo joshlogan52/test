@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python App UI</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+<div id="mainCont">
+    <h1>The Awesome Calculator</h1>
+
+    <select id="dropdownMenu" onchange="sendSelection()"></select>
+
+    <script>
+        // Directly use options provided by Flask
+        var options = {{ options | tojson | safe }};
+
+        window.onload = function() {
+            var select = document.getElementById('dropdownMenu');
+            options.forEach(function(option) {
+                var el = document.createElement('option');
+                el.textContent = option;
+                el.value = option;
+                select.appendChild(el);
+            });
+        };
+    </script>
+
+    <!-- Header for the form section -->
+    <h2>Calculate Your Numbers</h2>
+
+    <form id="numberForm">
+        <label for="number1">Number 1:</label>
+        <input type="number" id="number1" name="number1" placeholder="Number 1" step="any" oninput="autoSubmit();">
+        <br>
+        <label for="number2">Number 2:</label>
+        <input type="number" id="number2" name="number2" placeholder="Number 2" step="any" oninput="autoSubmit();">
+        <br>
+        <label for="number3">Number 3:</label>
+        <input type="number" id="number3" name="number3" placeholder="Number 3" step="any" oninput="autoSubmit();">
+        <br>
+    </form>
+    <p id="result"></p>
+</div>
+
+<script src="/static/scripts/dropdown.js"></script>
+<script src="/static/scripts/updateForm.js"></script>
+
+
+</body>
+
+</html>
