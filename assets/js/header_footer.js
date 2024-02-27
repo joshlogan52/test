@@ -1,12 +1,12 @@
 // Function to load header and footer
 function loadHeaderAndFooter() {
-  fetch('header.html')
+  fetch('/templates/header.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('header-placeholder').innerHTML = html;
     });
 
-  fetch('footer.html')
+  fetch('/templates/footer.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('footer-placeholder').innerHTML = html;
